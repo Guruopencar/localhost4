@@ -10,6 +10,7 @@ class ControllerExtensionModuleLatest extends Controller {
 		$data['products'] = array();
 
 		$filter_data = array(
+			'filter_category_id' => 62,
 			'sort'  => 'p.date_added',
 			'order' => 'DESC',
 			'start' => 0,

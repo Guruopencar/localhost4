@@ -4,10 +4,11 @@
 	background: #fff;
 	z-index: 1;
 	border: 4px solid #fff;
-	border-radius: 4px;
+	border-radius: 20px;
 	box-shadow: 0 1px 4px rgba(0,0,0,.2);
 	width: 100%;
 	position: relative;
+	padding:20px 0;
 	overflow: visible;
 }
 /* OpenCart Code */
@@ -17,60 +18,52 @@
 .swiper-pager {
 	width: 100%;
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	line-height: 45px;
 }
-.swiper-button-prev, .swiper-button-next {
-	color: rgba(0, 0, 0, 0.8);
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-	transition: all .3s ease;
+ .swiper-button-next {
+	
 	z-index: 2;
- 	background-image: none;
+ 	background: url(right.png) no-repeat;
+} .swiper-button-prev {
+	
+	z-index: 2;
+ 	background: url(left.png) no-repeat;
 }
 .swiper-viewport .swiper-button-prev {
-	opacity: 0.7;
-	left: 10px;
+	opacity: 1;
+	left: -40px;
 }
 .swiper-viewport .swiper-button-next {
-	opacity: 0.7;
-	right: 10px;
+	opacity: 1;
+	right: -40px;
 	
 }
 /* Desktop */
 @media (min-width: 768px){
 .swiper-viewport .swiper-button-prev {
-	opacity: 0;
-	left: -20px;
+	opacity: 1;
+	left: -40px;
 }
 .swiper-viewport .swiper-button-next {
-	opacity: 0;
-	right: -20px;
+	opacity: 1;
+	right: -51px;
 }
 .swiper-viewport:hover .swiper-button-prev {
-	opacity: 0.7;
-	left: 10px;
+	opacity: 0.9;
+
 
 }
 .swiper-viewport:hover .swiper-button-next {
-	opacity: 0.7;
-	right: 10px;
+	opacity: 0.9;
+
 }
 }
 .swiper-button-prev:before {
-	width: 40px;
-    height: 40px;
-	font-family: FontAwesome;
-	content: "\f053"; 
-	color: rgba(0,0,0,0.8);
-	font-size: 40px;
+	
 }
 .swiper-button-next:before {
-	width: 40px;
-    height: 40px;
-	font-family: FontAwesome;
-	content: "\f054"; 
-	color: rgba(0,0,0,0.8);
-	font-size: 40px;
+
 }
 .swiper-pagination {
 	bottom: -40px;
