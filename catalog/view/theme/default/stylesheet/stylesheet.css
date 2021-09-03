@@ -708,6 +708,32 @@ line-height: 24px;
 	
 }
 
+.remni:before{
+	background:url(../img/remni.png) left top no-repeat;
+position:absolute;
+	min-height:577px;
+	left:50%;
+	width:50%;
+	content:'';
+	
+}
+
+.title-remni{
+	
+	margin:101px 0 25px 0;
+	font-family: Vogue Highline Serif;
+font-style: normal;
+font-weight: 500;
+font-size: 50px;
+line-height: 69px;
+
+align-items: left;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+}
+
 
 .about:before{
 	background:url(../img/bg-about.png) left top no-repeat;
@@ -893,3 +919,6 @@ background:none;
 }
 
 .container{position:relative; z-index: 999;}
+
+
+.desc{margin-bottom:50px;}

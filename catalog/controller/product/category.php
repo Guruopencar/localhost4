@@ -384,8 +384,12 @@ class ControllerProductCategory extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 			
-
+if($category_id == 60){
+		$this->response->setOutput($this->load->view('product/category_rem', $data));
+	
+}else{
 			$this->response->setOutput($this->load->view('product/category', $data));
+}
 		} else {
 			$url = '';
 

@@ -1,46 +1,37 @@
- <div   
-      class="swiper mySwiper2"
-    >
-      <div class="swiper-wrapper">
-	  {% for banner in banners %}
-        <div class="swiper-slide">
-          <img src="{{ banner.image }}" />
-        </div>
-        {% endfor %}
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-    <div thumbsSlider="" class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        {% for banner in banners %}
-        <div class="swiper-slide">
-          <img src="{{ banner.image }}" />
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-	
-	    <!-- Demo styles -->
-   
+<!-- FlexSlider -->
+  <script defer src="catalog/view/javascript/jquery/FlexSlider/js/jquery.flexslider.js"></script>
+  
+	<link rel="stylesheet" href="catalog/view/javascript/jquery/FlexSlider/css/flexslider.css" type="text/css" media="screen" />
 
-<script>
-      var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
+  
+  <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+		  {% for banner in banners %}
+            <li data-thumb="{{ banner.image }}">
+  	    	    <img src="{{ banner.image }}" />
+  	    		</li>
+				{% endfor %}
+  	    		
+          </ul>
+        </div>
+      </section>
+	  
+	  
+	  
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
       });
-      var swiper2 = new Swiper(".mySwiper2", {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-          swiper: swiper,
-        },
-      });
-    </script>
+    });
+  </script>
+  

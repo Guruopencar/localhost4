@@ -1,0 +1,82 @@
+{{ header }}
+<div class="bg-header-1" style="background:url('{{ thumb }}') center top no-repeat;"></div>
+
+
+  <div class="container">
+  <div class="row">
+<div class="model-title">{{ heading_title }}</div>
+
+{%if products %}
+ {% for product in products %}
+  <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" /></div>
+      <div class="caption">
+        <h4>{{ product.name }}</h4>
+       
+        {% if product.price %}
+        <p class="price"> {% if not product.special %}
+          {{ product.price }}
+          {% else %} <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span> {% endif %}
+          {% if product.tax %} <span class="price-tax">{{ text_tax }} {{ product.tax }}</span> {% endif %} </p>
+        {% endif %} </div>
+      <a href="#" onclick="order(),  return false;" class="btn-order">Заказать</a>
+    </div>
+	
+  </div>
+  {% endfor %} 
+  {% endif %}
+  
+  
+  
+  
+  <div class="modulesside">{{ content_top }}</div>
+
+
+  
+  </div>
+</div>
+  <div class="remni">
+
+<div  class="container">
+<div class="row">
+<div class="block-remni col-sm-6 ">
+<div class="title-remni">КАк сделать<br /> заказ</div>
+<div class="text-remni">{{ description }}</div>
+
+
+
+</div>
+</div>
+  
+  
+</div>
+</div>
+<div class="clear"></div>
+<div class="bg-form">
+	  <div class="container">
+  <div class="row">
+  <form id="wont" class="form-wont">
+  <div class="title-form">Отправить заявку</div>
+  <div class="bode-form">
+  <input name="name" type="text" placeholder="Ваше имя" required />
+  <input name="phone" type="text" placeholder="Номер телефона" required />
+  <button type="submint" class="btn=send">Хочу заказать</button>
+  </div>
+  
+  </form>
+
+
+</div>
+</div>
+</div>
+	  <div class="container">
+  <div class="row">
+{{ content_bottom }}
+
+
+
+
+</div>
+</div>
+{{ footer }} 
