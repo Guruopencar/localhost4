@@ -22,7 +22,21 @@ function getURLVar(key) {
 	}
 }
 
+function order(product, img, price){
+	
+		$("#namemodel").text(product);
+		$("#pricemodel").text(price);
+		$("#modelimage img").attr("src",img);
+		 $('#modalorder').modal('show');
+		
+		
+		
+	};
+
 $(document).ready(function() {
+	
+	
+	
 	// Highlight any found errors
 	$('.text-danger').each(function() {
 		var element = $(this).parent().parent();

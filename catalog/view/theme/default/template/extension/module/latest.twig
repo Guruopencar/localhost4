@@ -12,7 +12,7 @@
           {% else %} <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span> {% endif %}
           {% if product.tax %} <span class="price-tax">{{ text_tax }} {{ product.tax }}</span> {% endif %} </p>
         {% endif %} </div>
-      <a href="#" onclick="order(),  return false;" class="btn-order">Заказать</a>
+      <a href=" javascript:void(0)" onclick="order('{{ product.name }}','{{ product.thumb }}',  '{{ product.price }}');" class="btn-order">Заказать</a>
     </div>
 	
   </div>

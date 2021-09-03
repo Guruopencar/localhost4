@@ -106,23 +106,23 @@ html[xmlns] .flexslider .slides {
 }
 .flex-direction-nav a {
   text-decoration: none;
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin: -20px 0 0;
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  overflow: hidden;
-  opacity: 1;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.8);
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+    display: block;
+    width: 13px;
+    height: 40px;
+    margin: -5px 0 0;
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 1;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 0 rgb(255 255 255 / 30%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .flex-direction-nav a:before {
   font-family: "flexslider-icon";
@@ -136,11 +136,11 @@ html[xmlns] .flexslider .slides {
   content: ' ';
 }
 .flex-direction-nav .flex-prev {
-  left: 40px;
+  left: 7px;
   background: url(left.png) no-repeat;
 }
 .flex-direction-nav .flex-next {
-  right: 20px;
+  right: 7px;
   
   background: url(right.png) no-repeat;
 font-size:0;
@@ -251,10 +251,22 @@ font-size:0;
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {
     opacity: 1;
-    left: 10px;
+    left: 7px;
   }
   .flex-direction-nav .flex-next {
     opacity: 1;
-    right: 10px;
+    right: 7px;
   }
+  
+  .flex-control-thumbs{
+	padding:0;
+	
+	
+}
+
+.flex-control-thumbs li {
+    width: 50%!important;
+    float: left;
+    margin: 0;
+}
 }
